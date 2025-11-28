@@ -1,180 +1,141 @@
-📸  Age & Gender Prediction
+# 📸 UTKFace Age & Gender Detection  
+Deep Learning Project for Real-Time Face Analysis
 
-Machine Learning Project for Real-Time Age and Gender Detection using UTKFace Dataset
+This project uses the **UTKFace dataset** to train Convolutional Neural Networks capable of predicting **gender** and **age groups** from facial images.  
+It includes data preparation scripts, model architectures, training pipelines, and a real-time webcam detection system powered by OpenCV.
 
-🚀 Overview
+---
 
-This project uses the UTKFace dataset to train deep learning models capable of predicting:
+## 📂 Project Structure
 
-Gender (Male/Female)
-
-Age (categorized into multiple age classes)
-
-The project includes modules for data preparation, model training, and real-time prediction using a webcam.
-
-Deep learning models are implemented using TensorFlow/Keras, and the system performs real-time face detection using OpenCV.
-
-📂 Project Structure
 UTKFace-Project/
 │
-├── combined_faces/             # Cleaned & formatted dataset
+├── combined_faces/ # Cleaned & formatted dataset
 │
-├── dataPreparationSex.py       # Preprocessing script for gender labels
-├── dataPreparationAge.py       # Preprocessing script for age categories
+├── dataPreparationSex.py # Preprocessing script for gender labels
+├── dataPreparationAge.py # Preprocessing script for age categories
 │
-├── genderModelSex.py           # CNN model architecture for gender detection
-├── genderModelAge.py           # CNN model architecture for age classification
+├── genderModelSex.py # CNN model architecture for gender detection
+├── genderModelAge.py # CNN model architecture for age classification
 │
-├── trainModelsSex.py           # Model training script for gender
-├── trainModelsAge.py           # Model training script for age
+├── trainModelsSex.py # Model training script for gender
+├── trainModelsAge.py # Model training script for age
 │
-├── gender_model.h5             # Pretrained gender model
+├── gender_model.h5 # Pretrained gender model
 │
-└── webCamDetection.py          # Real-time webcam detection script
+└── webCamDetection.py # Real-time webcam detection script
 
-📦 Requirements
+yaml
+Copy code
 
-Make sure you have the following libraries installed:
+---
 
+## ⚙️ Installation
+
+Make sure you have Python **3.10 – 3.11** installed.
+
+Install dependencies:
+
+```bash
 pip install tensorflow
 pip install numpy
 pip install pandas
 pip install opencv-python
 pip install matplotlib
-
-
-Python version recommended: 3.10 – 3.11
-
-🧹 1. Data Preparation
-🔹 dataPreparationSex.py
-
+🧹 Data Preparation
+▶ dataPreparationSex.py
 Loads UTKFace images
 
 Extracts gender labels from filenames
 
-Processes and resizes images
+Resizes and normalizes images
 
-Converts images to arrays
+Saves arrays for training gender model
 
-Saves them into NumPy-friendly format
+▶ dataPreparationAge.py
+Extracts age values and converts them into 7 age groups
 
-🔹 dataPreparationAge.py
+Preprocesses images
 
-Similar to dataPreparationSex.py
+Prepares dataset for age-classification training
 
-Extracts age and converts it into 7 age groups
+🧠 Model Architectures
+▶ genderModelSex.py
+Defines the CNN for binary gender classification:
 
-Prepares images for training
-
-🧠 2. Model Architecture
-🔹 genderModelSex.py
-
-Defines a CNN model for binary gender classification:
-
-Convolutional layers
-
-Pooling
+Convolution + Pooling layers
 
 Batch Normalization
 
-Fully connected dense layers
+Dense layers
 
-Softmax output (Male/Female)
+Softmax output (Male / Female)
 
-🔹 genderModelAge.py
+▶ genderModelAge.py
+Defines the CNN for multi-class age classification:
 
-Defines a CNN model for age-group classification:
+Softmax output over 7 age categories
 
-Multi-class softmax output
+Deeper CNN structure for better feature extraction
 
-Trained on 7 age categories
+🏋️ Training the Models
+▶ trainModelsSex.py
+Loads gender dataset
 
-🏋️ 3. Training Scripts
-🔹 trainModelsSex.py
+Trains CNN model
 
-Loads preprocessed data
+Saves result as gender_model.h5
 
-Compiles the gender CNN
-
-Trains and saves the model as gender_model.h5
-
-🔹 trainModelsAge.py
-
+▶ trainModelsAge.py
 Loads the age dataset
 
-Trains and saves the age model
+Trains age classification model
 
 Displays accuracy/loss curves
 
-🎥 4. Real-Time Detection
-🔹 webCamDetection.py
+🎥 Real-Time Webcam Detection
+▶ webCamDetection.py
+This script performs:
 
-This script:
+Face detection using OpenCV
 
-Loads the trained models (gender_model.h5, age model)
+Image preprocessing
 
-Captures webcam stream using OpenCV
+Real-time gender prediction
 
-Detects faces in real-time
+Real-time age group prediction
 
-Preprocesses the detected face
+Drawing bounding boxes + labels on the webcam feed
 
-Predicts:
-✔ Gender
-✔ Age group
+Run the script:
 
-Draws bounding boxes and labels on screen
-
-To start real-time detection:
-
+bash
+Copy code
 python webCamDetection.py
-
-🧪 Testing the Model
-
-To test on a single image:
-
-from tensorflow.keras.models import load_model
-import cv2
-import numpy as np
-
-model = load_model("gender_model.h5")
-img = cv2.imread("test.jpg")
-# preprocess...
-# prediction...
-
 📊 Results
+Works in real-time (20–30 FPS depending on hardware)
 
-Achieved reliable classification accuracy on UTKFace dataset
+Good performance on UTKFace for gender classification
 
-Smooth real-time detection (20–30 FPS depending on system)
+Age classification accuracy depends on dataset quality
 
-Strong generalization on unseen faces
+(Add your own accuracy metrics here.)
 
-(Add your accuracy results here once your training is finished.)
+🚀 Future Improvements
+Add race/ethnicity classification
 
-📌 Future Improvements
+Improve age detection using transfer learning (ResNet, MobileNet, etc.)
 
-Add race detection
+Build a user interface (Tkinter / PyQt)
 
-Increase number of age groups
-
-Improve model using transfer learning
-
-Add GUI interface with Tkinter or PyQt
-
-Deploy as a Flask/FastAPI Web App
+Deploy as a web application using Flask or FastAPI
 
 🙌 Credits
+UTKFace Dataset — A benchmark dataset for age, gender, and ethnicity detection
 
-UTKFace Dataset: A large-scale dataset for age, gender, and ethnicity classification.
+Developed by Khalil Ghouddan
 
-Project developed by Khalil Ghouddan.
-
-If you want, I can also:
-
-✔ Generate a Markdown version ready for GitHub
-✔ Add images or architecture diagrams
-✔ Add installation instructions for Windows/Linux/Mac
-✔ Add badges (TensorFlow, Python, License, etc.)
-
-Just tell me!
+If you want, I can also add:
+✔ Badges (Python, TensorFlow, License, Stars, etc.)
+✔ Screenshots or GIFs of real-time detection
+✔ A license section (MIT / Apache / GPL)
