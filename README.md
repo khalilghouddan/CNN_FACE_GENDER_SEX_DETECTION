@@ -3,13 +3,14 @@ Deep Learning Project for Real-Time Face Analysis
 
 This project uses the **UTKFace dataset** to train Convolutional Neural Networks capable of predicting **gender** and **age groups** from facial images.  
 It includes data preparation scripts, model architectures, training pipelines, and a real-time webcam detection system powered by OpenCV.
+Works in real-time (20–30 FPS depending on hardware)
+
 
 ---
 
 
 
 📊 Results
-Works in real-time (20–30 FPS depending on hardware)
 
 
 # Result gender_model
