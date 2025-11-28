@@ -12,12 +12,13 @@ It includes data preparation scripts, model architectures, training pipelines, a
 Works in real-time (20–30 FPS depending on hardware)
 
 
-### Result gender_model
+# Result gender_model
 
 <p align="center">
   <img src="./imgs_project/sex_model_result.png" width="700">
 </p>
-### Result Age_model
+
+# Result Age_model
 
 <p align="center">
   <img src="./imgs_project/age_model_result.png" width="700">
@@ -68,7 +69,7 @@ pip install matplotlib
 
 
 
-###🚀 Future Improvements
+## 🚀 Future Improvements
 Add race/ethnicity classification
 
 Improve age detection using transfer learning (ResNet, MobileNet, etc.)
@@ -77,6 +78,6 @@ Build a user interface (Tkinter / PyQt)
 
 Deploy as a web application using Flask or FastAPI
 
-###🙌 Credits
+# 🙌 Credits
 UTKFace Dataset 
 Developed by GK
