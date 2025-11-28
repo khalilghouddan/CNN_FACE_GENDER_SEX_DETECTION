@@ -15,12 +15,12 @@ Works in real-time (20–30 FPS depending on hardware)
 ### Result gender_model
 
 <p align="center">
-  <img src="./imgs_project/sex_model_result.png" width="400">
+  <img src="./imgs_project/sex_model_result.png" width="700">
 </p>
 ### Result Age_model
 
 <p align="center">
-  <img src="./imgs_project/age_model_result.png" width="400">
+  <img src="./imgs_project/age_model_result.png" width="700">
 </p>
 
 
