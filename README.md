@@ -8,6 +8,7 @@ It includes data preparation scripts, model architectures, training pipelines, a
 
 ## 📂 Project Structure
 
+```bash
 Project/
 │
 ├── combined_faces/ # Cleaned & formatted dataset
@@ -24,9 +25,8 @@ Project/
 ├── gender_model.h5 # Pretrained gender model
 │
 └── webCamDetection.py # Real-time webcam detection script
+```
 
-yaml
-Copy code
 
 ---
 
@@ -45,73 +45,9 @@ pip install matplotlib
 🧹 Data Preparation
 ▶ dataPreparationSex.py
 Loads UTKFace images
+```
 
-Extracts gender labels from filenames
 
-Resizes and normalizes images
-
-Saves arrays for training gender model
-
-▶ dataPreparationAge.py
-Extracts age values and converts them into 7 age groups
-
-Preprocesses images
-
-Prepares dataset for age-classification training
-
-🧠 Model Architectures
-▶ genderModelSex.py
-Defines the CNN for binary gender classification:
-
-Convolution + Pooling layers
-
-Batch Normalization
-
-Dense layers
-
-Softmax output (Male / Female)
-
-▶ genderModelAge.py
-Defines the CNN for multi-class age classification:
-
-Softmax output over 7 age categories
-
-Deeper CNN structure for better feature extraction
-
-🏋️ Training the Models
-▶ trainModelsSex.py
-Loads gender dataset
-
-Trains CNN model
-
-Saves result as gender_model.h5
-
-▶ trainModelsAge.py
-Loads the age dataset
-
-Trains age classification model
-
-Displays accuracy/loss curves
-
-🎥 Real-Time Webcam Detection
-▶ webCamDetection.py
-This script performs:
-
-Face detection using OpenCV
-
-Image preprocessing
-
-Real-time gender prediction
-
-Real-time age group prediction
-
-Drawing bounding boxes + labels on the webcam feed
-
-Run the script:
-
-bash
-Copy code
-python webCamDetection.py
 📊 Results
 Works in real-time (20–30 FPS depending on hardware)
 
@@ -119,6 +55,15 @@ Works in real-time (20–30 FPS depending on hardware)
   <img src="./imgs_project/age_model_result.png" width="400">
   <img src="./imgs_project/sex_model_result.png" width="400">
 </p>
+
+## 📊 Results
+
+### Result 1
+![Result Image 1](./images/result1.png)
+
+### Result 2
+![Result Image 2](./images/result2.png)
+
 
 
 🚀 Future Improvements
