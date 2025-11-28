@@ -6,6 +6,25 @@ It includes data preparation scripts, model architectures, training pipelines, a
 
 ---
 
+
+
+📊 Results
+Works in real-time (20–30 FPS depending on hardware)
+
+
+### Result gender_model
+
+<p align="center">
+  <img src="./imgs_project/sex_model_result.png" width="400">
+</p>
+### Result Age_model
+
+<p align="center">
+  <img src="./imgs_project/age_model_result.png" width="400">
+</p>
+
+
+
 ## 📂 Project Structure
 
 ```bash
@@ -42,31 +61,14 @@ pip install numpy
 pip install pandas
 pip install opencv-python
 pip install matplotlib
-🧹 Data Preparation
-▶ dataPreparationSex.py
-Loads UTKFace images
 ```
 
 
-📊 Results
-Works in real-time (20–30 FPS depending on hardware)
-
-<p align="center">
-  <img src="./imgs_project/age_model_result.png" width="400">
-  <img src="./imgs_project/sex_model_result.png" width="400">
-</p>
-
-## 📊 Results
-
-### Result 1
-![Result Image 1](./images/result1.png)
-
-### Result 2
-![Result Image 2](./images/result2.png)
 
 
 
-🚀 Future Improvements
+
+###🚀 Future Improvements
 Add race/ethnicity classification
 
 Improve age detection using transfer learning (ResNet, MobileNet, etc.)
@@ -75,12 +77,6 @@ Build a user interface (Tkinter / PyQt)
 
 Deploy as a web application using Flask or FastAPI
 
-🙌 Credits
+###🙌 Credits
 UTKFace Dataset 
-
-Developed by Khalil Ghouddan
-
-If you want, I can also add:
-✔ Badges (Python, TensorFlow, License, Stars, etc.)
-✔ Screenshots or GIFs of real-time detection
-✔ A license section (MIT / Apache / GPL)
+Developed by GK
