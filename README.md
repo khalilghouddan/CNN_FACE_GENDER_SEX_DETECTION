@@ -1,4 +1,4 @@
-# 📸 UTKFace Age & Gender Detection  
+# 📸  Age & Gender Detection  
 Deep Learning Project for Real-Time Face Analysis
 
 This project uses the **UTKFace dataset** to train Convolutional Neural Networks capable of predicting **gender** and **age groups** from facial images.  
@@ -8,7 +8,7 @@ It includes data preparation scripts, model architectures, training pipelines, a
 
 ## 📂 Project Structure
 
-UTKFace-Project/
+Project/
 │
 ├── combined_faces/ # Cleaned & formatted dataset
 │
@@ -131,7 +131,7 @@ Build a user interface (Tkinter / PyQt)
 Deploy as a web application using Flask or FastAPI
 
 🙌 Credits
-UTKFace Dataset — A benchmark dataset for age, gender, and ethnicity detection
+UTKFace Dataset 
 
 Developed by Khalil Ghouddan
 
