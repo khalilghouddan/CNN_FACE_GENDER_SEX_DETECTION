@@ -115,11 +115,11 @@ python webCamDetection.py
 📊 Results
 Works in real-time (20–30 FPS depending on hardware)
 
-Good performance on UTKFace for gender classification
+<p align="center">
+  <img src="./imgs_project/age_model_result.png" width="400">
+  <img src="./imgs_project/sex_model_result.png" width="400">
+</p>
 
-Age classification accuracy depends on dataset quality
-
-(Add your own accuracy metrics here.)
 
 🚀 Future Improvements
 Add race/ethnicity classification
